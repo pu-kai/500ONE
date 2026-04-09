@@ -16,16 +16,16 @@ export default defineConfig({
         background_color: '#ffffff',
         display: 'standalone',
         orientation: 'portrait',
-        scope: '/',
-        start_url: '/',
+        scope: '/500ONE/',
+        start_url: '/500ONE/',
         icons: [
           {
-            src: '/icon-192.svg',
+            src: 'icon-192.svg',
             sizes: '192x192',
             type: 'image/svg+xml'
           },
           {
-            src: '/icon-512.svg',
+            src: 'icon-512.svg',
             sizes: '512x512',
             type: 'image/svg+xml'
           }
