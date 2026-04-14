@@ -14,11 +14,11 @@ export default function TrendChart() {
     db.draws.orderBy('period').reverse().toArray().then(setAllDraws)
   }, [])
 
-  const visibleDraws = allDraws.slice(0, page * pageSize)
+  const visibleDraws = allDraws.slice(0, page * pageSize).reverse()
 
   const gapData = useMemo(() => {
     const gaps = new Map<string, { red: number[]; blue: number[] }>()
-    const chronological = [...allDraws]
+    const chronological = [...allDraws].reverse()
     const redGap = new Array(RED_COUNT).fill(0)
     const blueGap = new Array(BLUE_COUNT).fill(0)
 
