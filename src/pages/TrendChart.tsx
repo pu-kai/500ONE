@@ -11,7 +11,7 @@ export default function TrendChart() {
   const [page, setPage] = useState(1)
 
   useEffect(() => {
-    db.draws.orderBy('period').reverse().toArray().then(setAllDraws)
+    db.draws.orderBy('period').toArray().then(setAllDraws)
   }, [])
 
   const visibleDraws = allDraws.slice(0, page * pageSize)
