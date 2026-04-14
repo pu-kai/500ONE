@@ -18,7 +18,7 @@ export default function TrendChart() {
 
   const gapData = useMemo(() => {
     const gaps = new Map<string, { red: number[]; blue: number[] }>()
-    const chronological = [...allDraws].reverse()
+    const chronological = [...allDraws]
     const redGap = new Array(RED_COUNT).fill(0)
     const blueGap = new Array(BLUE_COUNT).fill(0)
 
